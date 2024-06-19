@@ -1,0 +1,115 @@
+{
+    "test": [
+        {
+            "question": "Escreva uma função JavaScript que recebe um número como entrada e retorna 'true' se o número for par e 'false' se for ímpar.",
+            "response": "function parOuImpar(numero) { if (numero % 2 === 0) { return true;} else {return false;}}",
+            "dificuldade": "Fácil"
+        },
+        {
+            "question": "Escreva uma função JavaScript que recebe um valor em graus Celsius como entrada e retorna o valor equivalente em graus Fahrenheit.",
+            "response": "function celsiusParaFahrenheit(celsius) { return (celsius * 9/5) + 32;}",
+            "dificuldade": "Fácil"
+        },
+        {
+            "question": "Escreva uma função JavaScript que recebe os comprimentos dos três lados de um triângulo como entrada e retorna 'true' se o triângulo for retângulo e 'false' se não for.",
+            "response": "function trianguloRetangulo(lado1, lado2, lado3) { const hipotenusa = Math.max(lado1, lado2, lado3); const cateto1 = Math.min(lado1, lado2, lado3); const cateto2 = lado1 + lado2 + lado3 - hipotenusa; return (cateto1 * cateto1) === (cateto2 * cateto2);}",
+            "dificuldade": "Fácil"
+        },
+        {
+            "question": "Escreva uma função JavaScript que recebe o raio de um círculo como entrada e retorna a área do círculo.",
+            "response": "function calcularAreaCirculo(raio) { const area = Math.PI * raio * raio; return area;}",
+            "dificuldade": "Fácil"
+        },
+        {
+            "question": "Escreva uma função JavaScript que recebe um ano como entrada e retorna 'true' se o ano for bissexto e 'false' se não for.",
+            "response": "function anoBissexto(ano) { if (ano % 400 === 0) { return true;} else if (ano % 100 === 0) { return false; } else if (ano % 4 === 0) { return true; } else { return false; } }",
+            "dificuldade": "Fácil"
+        },
+        {
+            "question": "Escreva uma função JavaScript que recebe um número inteiro como entrada e retorna a soma de seus dígitos.",
+            "response": "function somarDigitos(numero) { let soma = 0; while (numero > 0) { const digito = numero % 10; soma += digito; numero = Math.floor(numero / 10); } return soma; }",
+            "dificuldade": "Fácil"
+        },
+        {
+            "question": "Escreva uma função JavaScript que recebe uma string como entrada e retorna 'true' se a string for um palíndromo e 'false' se não for.",
+            "response": "function verificarPalindromo(texto) { const textoLimpo = texto.replace(/[^a-zA-Z0-9 ]/g, '').toLowerCase(); const reverso = textoLimpo.split('').reverse().join('');",
+            "dificuldade": "Médio"
+        },
+        {
+            "question": "Crie uma função que calcule o fatorial de um número.",
+            "response": "function fatorial(n) { if (n === 0 || n === 1) { return 1; } return n * fatorial(n - 1); }",
+            "dificuldade": "Fácil"
+        },
+        {
+            "question": "Escreva um loop que imprima os números de 1 a 10 no console.",
+            "response": "for (let i = 1; i <= 10; i++) { console.log(i); }",
+            "dificuldade": "Fácil"
+        },
+        {
+            "question": "Crie uma função que verifique se uma palavra é um palíndromo.",
+            "response": "function ehPalindromo(palavra) { let reverso = palavra.split('').reverse().join(''); return palavra === reverso; }",
+            "dificuldade": "Fácil"
+        },
+        {
+            "question": "Escreva uma função que conte o número de letras em uma string.",
+            "response": "function contarLetras(str) { return str.length; }",
+            "dificuldade": "Fácil"
+        },
+        {
+            "question": "Crie uma função que retorne um número aleatório entre 1 e 100.",
+            "response": "function numeroAleatorio() { return Math.floor(Math.random() * 100) + 1; }",
+            "dificuldade": "Fácil"
+        },
+        {
+            "question": "Escreva uma função que receba um array de números e retorne um novo array com cada número multiplicado por 2.",
+            "response": "function multiplicarArray(arr) { return arr.map(num => num * 2); }",
+            "dificuldade": "Fácil"
+        },
+        {
+            "question": "Crie uma função que remova os valores duplicados de um array. javascript ",
+            "response": "function removerDuplicatas(arr) { return [...new Set(arr)]; }",
+             "dificuldade": "Fácil"
+        },
+        {
+            "question": "Escreva uma função que receba um array de números e retorne o maior número",
+            "response": "function maiorNumero(arr) { return Math.max(...arr); }",
+            "dificuldade": "Fácil"
+        },
+        {
+            "question": "Crie uma função que conte o número de vogais em uma string.",
+            "response": "function contarVogais(str) { let vogais = 'aeiouAEIOU'; let count = 0; for (let char of str) { if (vogais.includes(char)) { count++; } } return count; }",
+            "dificuldade": "Fácil"
+        },
+        {
+            "question": "Crie uma função que verifique se um número é primo.",
+            "response": "function ehPrimo(num) { if (num <= 1) return false; for (let i = 2; i < num; i++) { if (num % i === 0) return false; } return true; }",
+            "dificuldade": "Fácil"
+        },
+        {
+            "question": "Escreva uma função que calcule a média dos números em um array.",
+            "response": "function mediaArray(arr) { let soma = arr.reduce((acc, num) => acc + num, 0); return soma / arr.length; }",
+            "dificuldade": "Fácil"
+        },
+        {
+            "question": "Crie uma função que remova todos os valores falsy de um array. (Valores falsy são: false, null, 0, '', undefined, e NaN)",
+            "response": "function removeFalsy(arr) { return arr.filter(Boolean); } console.log(removeFalsy([0, 1, false, 2, '', 3, null, 4, undefined]));",
+            "dificuldade": "Fácil"
+        },
+        {
+            "question": "Crie uma função que verifique se duas strings são anagramas.",
+            "response": "function saoAnagramas(str1, str2) { let normalize = str => str.toLowerCase().replace(/[^a-z0-9]/g, '').split('').sort().join(''); return normalize(str1) === normalize(str2); } console.log(saoAnagramas('Listen', 'Silent'));",
+            "dificuldade": "Fácil"
+        },
+        {
+            "question": "Escreva uma função que substitua todas as ocorrências de um determinado caractere em uma string por outro caractere.",
+            "response": "function substituirCaracter(str, oldChar, newChar) { return str.split(oldChar).join(newChar); } console.log(substituirCaracter('javascript', 'a', 'o'));",
+            "dificuldade": "Fácil"
+        },
+        {
+            "question": "",
+            "response": "",
+            "dificuldade": "Fácil"
+        }
+
+    ]
+}
