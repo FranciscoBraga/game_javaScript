@@ -107,15 +107,33 @@
         },
         {
             "question": "Escreva uma função que reverta uma string sem usar métodos embutidos de reversão.",
-            "response": "function reverseString(str) {let reversed = '';
-    for (let i = str.length - 1; i >= 0; i--) {
-        reversed += str[i];
-    }
-    return reversed;
-}
-
-console.log(reverseString("hello"));",
-            "dificuldade": "Fácil"
+            "response": "function reverseString(str) { let reversed = ''; for (let i = str.length - 1; i >= 0; i--) { reversed += str[i]; } return reversed; } ",
+            "dificuldade": "Médio"
+        },
+        {
+            "question": "Escreva uma função que imprima números de 1 a 100, mas para múltiplos de 3 imprima 'Fizz' ao invés do número e para múltiplos de 5 imprima 'Buzz'. Para números que são múltiplos de ambos 3 e 5, imprima 'FizzBuzz'.",
+            "response": "function fizzBuzz() { for (let i = 1; i <= 100; i++) { if (i % 15 === 0) { console.log('FizzBuzz'); } else if (i % 3 === 0) { console.log('Fizz'); } else if (i % 5 === 0) { console.log('Buzz'); } else { console.log(i); } } } ",
+            "dificuldade": "Médio"
+        },
+        {
+            "question": "Escreva uma função que verifique se uma string é um palíndromo (a mesma de trás para frente).",
+            "response": "function isPalindrome(str) { const cleanedStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase(); const reversedStr = cleanedStr.split('').reverse().join(''); return cleanedStr === reversedStr; } console.log(isPalindrome('A man, a plan, a canal: Panama'))",
+            "dificuldade": "Médio"
+        },
+        {
+            "question": "",
+            "response": "",
+            "dificuldade": "Médio"
+        },
+        {
+            "question": "",
+            "response": "",
+            "dificuldade": "Médio"
+        },
+        {
+            "question": "",
+            "response": "",
+            "dificuldade": "Médio"
         },
         {
             "question": "",
@@ -130,12 +148,6 @@ console.log(reverseString("hello"));",
             "question": "",
             "response": "",
             "dificuldade": "Fácil"
-        },
-        {
-            "question": "",
-            "response": "",
-            "dificuldade": "Fácil"
         }
-
     ]
 }

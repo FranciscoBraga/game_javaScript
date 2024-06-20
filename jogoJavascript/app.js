@@ -1,6 +1,5 @@
  const button = document.querySelector("#button")
 
-
  button.addEventListener('click', function() {
         fetch('question_response.json')
             .then(response => {
@@ -10,22 +9,25 @@
                 return response.json();
             })
             .then(data => {
-                 tratarJson(data);
-                //document.getElementById('output').textContent = 
+                document.getElementById('output').textContent = tratarJson(data)
+             
             })
             .catch(error => {
                 document.getElementById('output').textContent = 'Erro: ' + error.message;
             });
     });
 
-
      function tratarJson(file){
         let random = Math.floor(Math.random()*file.test.length)
-        console.log(random)
-            console.log(file.test[random].question)
-            console.log(file.test[random].response)
-        
-       
-
+        console.log(file)
+            return file.test[random].question
+         
      }
+
+
+
+
+
+
+
   
