@@ -20,6 +20,10 @@ body{
 
 }
 
+header{
+    display: flex;
+    justify-content: space-evenly;
+}
 h1{
     font-size: 2.5rem;
     color: #fd8b19;
@@ -28,7 +32,7 @@ h1{
 #output{
     margin: 10px;
     padding: 10px;
-   font-size:  2rem;
+   font-size:  1.8rem;
 }
 
 button{
@@ -47,10 +51,30 @@ hr{
     width: 100%;
 }
 
+#configuracao{
+    border: 1px solid #ccc;
+    border-radius: 0 10px 10px 0;
+    width: 35%;
+    padding: 15px;
+
+}
+#configuracao #duracaoJogo label{
+    display: block;
+}
+#configuracao input{
+  margin:  10px 0;
+  padding: 10px;
+}
+#configuracao input[type='text']{
+    width: 90%;
+    border-radius: 0 10px 10px 0;
+}
+
 #tempo{
    display: flex;
    justify-content: center;
    margin: 50px 0;
+   font-size: 2rem;
     
 }
 
@@ -74,7 +98,9 @@ hr{
     background-color: rgb(182, 147, 105);
     border-radius: 5px;
     border:1px solid rgb(240, 195, 144);
-  
 
+}
+.hide{
+    display: none;
 }
 

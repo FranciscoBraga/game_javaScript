@@ -6,11 +6,29 @@
     <title>Game JavaScript</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0" />
 </head>
 <body>
-    <h1>Teste JavaScript</h1>
-    <div id="configuracao">
-        <input type="text" id="duracaoTempo" onblur="duracaoTempo(this.value)">
+    <header>
+        <span class="material-symbols-outlined" onclick="settings()">
+            settings
+            </span>
+        <h1>Teste JavaScript</h1>
+    </header>
+    <div id="configuracao" class="hide">
+        <div id="radioButton" >
+            <label for="easy">Fácil</label>
+            <input type="radio" name="level" id="easy">
+            <label for="medium">Médio</label>
+            <input type="radio" name="level" id="medium">
+            <label for="hard">Difícl</label>
+            <input type="radio" name="level" id="hard">
+        </div>
+        <div id="duracaoJogo">
+            <label for="duracaoTempo">Tempo</label>
+            <input type="text" name="duracaoTempo" id="duracaoTempo" placeholder=" Digite a duração do tempo">
+        </div>
+       
     </div>
     <div id="pergunta">
         <p id="output"></p>
@@ -19,7 +37,7 @@
     <br>
     <hr>
     <div id="tempo">
-        <div id="resposta">
+        <div id="resposta" >
             <span id="minutos">00</span>
             <span id="pontos">:</span>
             <span id="segundos">00</span>
