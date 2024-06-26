@@ -2,7 +2,8 @@
 
 Este sistema consiste em um temporizador combinado com um questionário simples que carrega perguntas e respostas de um arquivo JSON. Abaixo está um README detalhado para orientar sobre a configuração e uso do sistema.
 
-Estrutura do Projeto
+##Estrutura do Projeto
+
 *index.html: Contém o layout básico da página com botões, campos de entrada e elementos para exibir o temporizador e o questionário.
 *script.js: Contém toda a lógica JavaScript para controlar o temporizador e manipular o questionário.
 question_response.json: Arquivo JSON que contém as perguntas e respostas do questionário.
@@ -25,7 +26,7 @@ json exemplo
     }
   ]
 }
-```
+
 Código JavaScript
 Variáveis
 button: Seleciona o botão que inicia o temporizador e o questionário.
