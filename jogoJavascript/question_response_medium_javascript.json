@@ -1,0 +1,74 @@
+{
+    "test": [
+        {
+            "question": "Escreva uma função que reverta uma string sem usar métodos embutidos de reversão.",
+            "response": "function reverseString(str) { let reversed = ''; for (let i = str.length - 1; i >= 0; i--) { reversed += str[i]; } return reversed; } ",
+            "level": "medium"
+        },
+        {
+            "question": "Escreva uma função que imprima números de 1 a 100, mas para múltiplos de 3 imprima 'Fizz' ao invés do número e para múltiplos de 5 imprima 'Buzz'. Para números que são múltiplos de ambos 3 e 5, imprima 'FizzBuzz'.",
+            "response": "function fizzBuzz() { for (let i = 1; i <= 100; i++) { if (i % 15 === 0) { console.log('FizzBuzz'); } else if (i % 3 === 0) { console.log('Fizz'); } else if (i % 5 === 0) { console.log('Buzz'); } else { console.log(i); } } } ",
+            "level": "medium"
+        },
+        {
+            "question": "Escreva uma função que verifique se uma string é um palíndromo (a mesma de trás para frente).",
+            "response": "function isPalindrome(str) { const cleanedStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase(); const reversedStr = cleanedStr.split('').reverse().join(''); return cleanedStr === reversedStr; } console.log(isPalindrome('A man, a plan, a canal: Panama'))",
+            "level": "medium"
+        },
+        {
+            "question": "Escreva uma função JavaScript que recebe uma string como entrada e retorna 'true' se a string for um palíndromo e 'false' se não for.",
+            "response": "function verificarPalindromo(texto) { const textoLimpo = texto.replace(/[^a-zA-Z0-9 ]/g, '').toLowerCase(); const reverso = textoLimpo.split('').reverse().join('');",
+            "level": "medium"
+        },
+        {
+            "question": "Dado um array de números, escreva uma função que retorne um novo array com os números ordenados em ordem crescente e sem duplicatas.",
+            "response": "function ordenarArray(arr) { return [...new Set(arr)].sort((a, b) => a - b);}",
+            "level": "medium"
+        },
+        {
+            "question": "Implemente uma função que valide um formulário com campos como nome, email e senha. A função deve verificar se todos os campos estão preenchidos e se o email está em um formato válido.",
+            "response": "function validarFormulario(nome, email, senha) {if (!nome || !email || !senha) {return false;} const regexEmail = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/; return regexEmail.test(email); }",
+            "level": "medium"
+        },
+        {
+            "question": "Crie um botão em uma página HTML que, ao ser clicado, adicione um item a uma lista. A lista deve ser exibida na mesma página.",
+            "response": "<script> document.getElementById('adicionarItem').addEventListener('click', () => { const li = document.createElement('li');li.textContent = 'Novo Item'; document.getElementById('lista').appendChild(li);});</script>",
+            "level": "medium"
+        },
+        {
+            "question": "Crie uma classe Carro com propriedades como marca, modelo e ano. Adicione um método descrever que retorne uma string descrevendo o carro. Instancie alguns objetos dessa classe e chame o método descrever.",
+            "response": "class Carro { constructor(marca, modelo, ano) { this.marca = marca; this.modelo = modelo; this.ano = ano; } descrever() { return `Carro: ${this.marca} ${this.modelo}, Ano: ${this.ano}`; } }",
+            "level": "medium"
+        },
+        {
+            "question": "Escreva uma função recursiva que calcule o fatorial de um número.",
+            "response": "function fatorial(n) { if (n <= 1) return 1; return n * fatorial(n - 1); }",
+            "level": "medium"
+        },
+        {
+            "question": "Adicione um evento de clique a um botão que altere o texto de um parágrafo na página HTML para 'Olá, Mundo!'",
+            "response": " <script> document.getElementById('meuBotao').addEventListener('click', () => { document.getElementById('meuParagrafo').textContent = 'Olá, Mundo!'; }); </script>",
+            "level": "medium"
+        },
+        {
+            "question": "Implemente uma função que tente converter uma string para um número. Se a conversão falhar, a função deve lançar um erro customizado. Adicione um bloco try/catch para capturar e exibir o erro.",
+            "response": "function converterParaNumero(str) { const numero = Number(str); if (isNaN(numero)) { throw new Error('Erro: A conversão falhou!'); } return numero; } try { console.log(converterParaNumero('123')); // 123 console.log(converterParaNumero('abc')); // Error: A conversão falhou! } catch (error) { console.error(error.message); }",
+            "level": "medium"
+        },
+        {
+            "question":"Dado um array de objetos representando pessoas (com propriedades como nome e idade), escreva uma função que retorne a média das idades das pessoas.",
+            "response":"function calcularMediaIdades(pessoas) { const totalIdades = pessoas.reduce((total, pessoa) => total + pessoa.idade, 0); return totalIdades / pessoas.length; } const pessoas = [ { nome: 'Ana', idade: 25 }, { nome: 'João', idade: 30 }, { nome: 'Maria', idade: 35 }, { nome: 'Pedro', idade: 40 } ]; ",
+            "level":"medium"
+        },
+        {
+            "question":"",
+            "response":"",
+            "level":""
+        },
+        {
+            "question":"",
+            "response":"",
+            "level":""
+        }
+    ]
+}
