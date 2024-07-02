@@ -1,0 +1,245 @@
+{
+    "test": [
+        
+        { 
+            "easy":[
+                {
+                    "question": "Escreva uma função JavaScript que recebe um número como entrada e retorna 'true' se o número for par e 'false' se for ímpar.",
+                    "response": "function parOuImpar(numero) { if (numero % 2 === 0) { return true;} else {return false;}}",
+                    "level": "easy"
+                },
+                {
+                    "question": "Escreva uma função JavaScript que recebe um valor em graus Celsius como entrada e retorna o valor equivalente em graus Fahrenheit.",
+                    "response": "function celsiusParaFahrenheit(celsius) { return (celsius * 9/5) + 32;}",
+                    "level": "easy"
+                },
+                {
+                    "question": "Escreva uma função JavaScript que recebe os comprimentos dos três lados de um triângulo como entrada e retorna 'true' se o triângulo for retângulo e 'false' se não for.",
+                    "response": "function trianguloRetangulo(lado1, lado2, lado3) { const hipotenusa = Math.max(lado1, lado2, lado3); const cateto1 = Math.min(lado1, lado2, lado3); const cateto2 = lado1 + lado2 + lado3 - hipotenusa; return (cateto1 * cateto1) === (cateto2 * cateto2);}",
+                    "level": "easy"
+                },
+                {
+                    "question": "Escreva uma função JavaScript que recebe o raio de um círculo como entrada e retorna a área do círculo.",
+                    "response": "function calcularAreaCirculo(raio) { const area = Math.PI * raio * raio; return area;}",
+                    "level": "easy"
+                },
+                {
+                    "question": "Escreva uma função JavaScript que recebe um ano como entrada e retorna 'true' se o ano for bissexto e 'false' se não for.",
+                    "response": "function anoBissexto(ano) { if (ano % 400 === 0) { return true;} else if (ano % 100 === 0) { return false; } else if (ano % 4 === 0) { return true; } else { return false; } }",
+                    "level": "easy"
+                },
+                {
+                    "question": "Escreva uma função JavaScript que recebe um número inteiro como entrada e retorna a soma de seus dígitos.",
+                    "response": "function somarDigitos(numero) { let soma = 0; while (numero > 0) { const digito = numero % 10; soma += digito; numero = Math.floor(numero / 10); } return soma; }",
+                    "level": "easy"
+                },
+                {
+                    "question": "Crie uma função que calcule o fatorial de um número.",
+                    "response": "function fatorial(n) { if (n === 0 || n === 1) { return 1; } return n * fatorial(n - 1); }",
+                    "level": "easy"
+                },
+                {
+                    "question": "Escreva um loop que imprima os números de 1 a 10 no console.",
+                    "response": "for (let i = 1; i <= 10; i++) { console.log(i); }",
+                    "level": "easy"
+                },
+                {
+                    "question": "Crie uma função que verifique se uma palavra é um palíndromo.",
+                    "response": "function ehPalindromo(palavra) { let reverso = palavra.split('').reverse().join(''); return palavra === reverso; }",
+                    "level": "easy"
+                },
+                {
+                    "question": "Escreva uma função que conte o número de letras em uma string.",
+                    "response": "function contarLetras(str) { return str.length; }",
+                    "level": "easy"
+                },
+                {
+                    "question": "Crie uma função que retorne um número aleatório entre 1 e 100.",
+                    "response": "function numeroAleatorio() { return Math.floor(Math.random() * 100) + 1; }",
+                    "level": "easy"
+                },
+                {
+                    "question": "Escreva uma função que receba um array de números e retorne um novo array com cada número multiplicado por 2.",
+                    "response": "function multiplicarArray(arr) { return arr.map(num => num * 2); }",
+                    "level": "easy"
+                },
+                {
+                    "question": "Crie uma função que remova os valores duplicados de um array. javascript ",
+                    "response": "function removerDuplicatas(arr) { return [...new Set(arr)]; }",
+                     "level": "easy"
+                },
+                {
+                    "question": "Escreva uma função que receba um array de números e retorne o maior número",
+                    "response": "function maiorNumero(arr) { return Math.max(...arr); }",
+                    "level": "easy"
+                },
+                {
+                    "question": "Crie uma função que conte o número de vogais em uma string.",
+                    "response": "function contarVogais(str) { let vogais = 'aeiouAEIOU'; let count = 0; for (let char of str) { if (vogais.includes(char)) { count++; } } return count; }",
+                    "level": "easy"
+                },
+                {
+                    "question": "Crie uma função que verifique se um número é primo.",
+                    "response": "function ehPrimo(num) { if (num <= 1) return false; for (let i = 2; i < num; i++) { if (num % i === 0) return false; } return true; }",
+                    "level": "easy"
+                },
+                {
+                    "question": "Escreva uma função que calcule a média dos números em um array.",
+                    "response": "function mediaArray(arr) { let soma = arr.reduce((acc, num) => acc + num, 0); return soma / arr.length; }",
+                    "level": "easy"
+                },
+                {
+                    "question": "Crie uma função que remova todos os valores falsy de um array. (Valores falsy são: false, null, 0, '', undefined, e NaN)",
+                    "response": "function removeFalsy(arr) { return arr.filter(Boolean); } console.log(removeFalsy([0, 1, false, 2, '', 3, null, 4, undefined]));",
+                    "level": "easy"
+                },
+                {
+                    "question": "Crie uma função que verifique se duas strings são anagramas.",
+                    "response": "function saoAnagramas(str1, str2) { let normalize = str => str.toLowerCase().replace(/[^a-z0-9]/g, '').split('').sort().join(''); return normalize(str1) === normalize(str2); } console.log(saoAnagramas('Listen', 'Silent'));",
+                    "level": "easy"
+                },
+                {
+                    "question": "Escreva uma função que substitua todas as ocorrências de um determinado caractere em uma string por outro caractere.",
+                    "response": "function substituirCaracter(str, oldChar, newChar) { return str.split(oldChar).join(newChar); } console.log(substituirCaracter('javascript', 'a', 'o'));",
+                    "level": "easy"
+                }
+            ]
+        },
+        {
+            "medium":[
+                {
+                    "question": "Escreva uma função que reverta uma string sem usar métodos embutidos de reversão.",
+                    "response": "function reverseString(str) { let reversed = ''; for (let i = str.length - 1; i >= 0; i--) { reversed += str[i]; } return reversed; } ",
+                    "level": "medium"
+                },
+                {
+                    "question": "Escreva uma função que imprima números de 1 a 100, mas para múltiplos de 3 imprima 'Fizz' ao invés do número e para múltiplos de 5 imprima 'Buzz'. Para números que são múltiplos de ambos 3 e 5, imprima 'FizzBuzz'.",
+                    "response": "function fizzBuzz() { for (let i = 1; i <= 100; i++) { if (i % 15 === 0) { console.log('FizzBuzz'); } else if (i % 3 === 0) { console.log('Fizz'); } else if (i % 5 === 0) { console.log('Buzz'); } else { console.log(i); } } } ",
+                    "level": "medium"
+                },
+                {
+                    "question": "Escreva uma função que verifique se uma string é um palíndromo (a mesma de trás para frente).",
+                    "response": "function isPalindrome(str) { const cleanedStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase(); const reversedStr = cleanedStr.split('').reverse().join(''); return cleanedStr === reversedStr; } console.log(isPalindrome('A man, a plan, a canal: Panama'))",
+                    "level": "medium"
+                },
+                {
+                    "question": "Escreva uma função JavaScript que recebe uma string como entrada e retorna 'true' se a string for um palíndromo e 'false' se não for.",
+                    "response": "function verificarPalindromo(texto) { const textoLimpo = texto.replace(/[^a-zA-Z0-9 ]/g, '').toLowerCase(); const reverso = textoLimpo.split('').reverse().join('');",
+                    "level": "medium"
+                },
+                {
+                    "question": "Dado um array de números, escreva uma função que retorne um novo array com os números ordenados em ordem crescente e sem duplicatas.",
+                    "response": "function ordenarArray(arr) { return [...new Set(arr)].sort((a, b) => a - b);}",
+                    "level": "medium"
+                },
+                {
+                    "question": "Implemente uma função que valide um formulário com campos como nome, email e senha. A função deve verificar se todos os campos estão preenchidos e se o email está em um formato válido.",
+                    "response": "function validarFormulario(nome, email, senha) {if (!nome || !email || !senha) {return false;} const regexEmail = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/; return regexEmail.test(email); }",
+                    "level": "medium"
+                },
+                {
+                    "question": "Crie um botão em uma página HTML que, ao ser clicado, adicione um item a uma lista. A lista deve ser exibida na mesma página.",
+                    "response": "<script> document.getElementById('adicionarItem').addEventListener('click', () => { const li = document.createElement('li');li.textContent = 'Novo Item'; document.getElementById('lista').appendChild(li);});</script>",
+                    "level": "medium"
+                },
+                {
+                    "question": "Crie uma classe Carro com propriedades como marca, modelo e ano. Adicione um método descrever que retorne uma string descrevendo o carro. Instancie alguns objetos dessa classe e chame o método descrever.",
+                    "response": "class Carro { constructor(marca, modelo, ano) { this.marca = marca; this.modelo = modelo; this.ano = ano; } descrever() { return `Carro: ${this.marca} ${this.modelo}, Ano: ${this.ano}`; } }",
+                    "level": "medium"
+                },
+                {
+                    "question": "Escreva uma função recursiva que calcule o fatorial de um número.",
+                    "response": "function fatorial(n) { if (n <= 1) return 1; return n * fatorial(n - 1); }",
+                    "level": "medium"
+                },
+                {
+                    "question": "Adicione um evento de clique a um botão que altere o texto de um parágrafo na página HTML para 'Olá, Mundo!'",
+                    "response": " <script> document.getElementById('meuBotao').addEventListener('click', () => { document.getElementById('meuParagrafo').textContent = 'Olá, Mundo!'; }); </script>",
+                    "level": "medium"
+                },
+                {
+                    "question": "Implemente uma função que tente converter uma string para um número. Se a conversão falhar, a função deve lançar um erro customizado. Adicione um bloco try/catch para capturar e exibir o erro.",
+                    "response": "function converterParaNumero(str) { const numero = Number(str); if (isNaN(numero)) { throw new Error('Erro: A conversão falhou!'); } return numero; } try { console.log(converterParaNumero('123')); // 123 console.log(converterParaNumero('abc')); // Error: A conversão falhou! } catch (error) { console.error(error.message); }",
+                    "level": "medium"
+                },
+                {
+                    "question":"Dado um array de objetos representando pessoas (com propriedades como nome e idade), escreva uma função que retorne a média das idades das pessoas.",
+                    "response":"function calcularMediaIdades(pessoas) { const totalIdades = pessoas.reduce((total, pessoa) => total + pessoa.idade, 0); return totalIdades / pessoas.length; } const pessoas = [ { nome: 'Ana', idade: 25 }, { nome: 'João', idade: 30 }, { nome: 'Maria', idade: 35 }, { nome: 'Pedro', idade: 40 } ]; ",
+                    "level":"medium"
+                },
+                {
+                    "question":"",
+                    "response":"",
+                    "level":""
+                },
+                {
+                    "question":"",
+                    "response":"",
+                    "level":""
+                }
+            ]  
+        },
+        {
+            "hard":[
+                {
+                    "question": "Escreva uma função que verifique se uma matriz 9x9 representa uma solução válida de Sudoku.",
+                    "response": "function isValidSudoku(board) {const rows = Array(9).fill(null).map(() => new Set()); const cols = Array(9).fill(null).map(() => new Set()); const boxes = Array(9).fill(null).map(() => new Set()); for (let i = 0; i < 9; i++) { for (let j = 0; j < 9; j++) { const num = board[i][j]; if (num !== '.') { const boxIndex = Math.floor(i / 3) * 3 + Math.floor(j / 3); if (rows[i].has(num) || cols[j].has(num) || boxes[boxIndex].has(num)) { return false; } rows[i].add(num); cols[j].add(num); boxes[boxIndex].add(num); } } } return true; }",
+                    "level" :"hard"
+                },
+                {
+                    "question": "Escreva uma função que verifique se uma matriz 9x9 representa uma solução válida de Sudoku.",
+                    "response": "function trianguloRetangulo(lado1, lado2, lado3) { const hipotenusa = Math.max(lado1, lado2, lado3); const cateto1 = Math.min(lado1, lado2, lado3); const cateto2 = lado1 + lado2 + lado3 - hipotenusa; return (cateto1 * cateto1) === (cateto2 * cateto2);}",
+                    "level": "hard"
+                },
+                {
+                    "question": "Escreva uma função que verifique se uma matriz 9x9 representa uma solução válida de Sudoku.",
+                    "response": "function trianguloRetangulo(lado1, lado2, lado3) { const hipotenusa = Math.max(lado1, lado2, lado3); const cateto1 = Math.min(lado1, lado2, lado3); const cateto2 = lado1 + lado2 + lado3 - hipotenusa; return (cateto1 * cateto1) === (cateto2 * cateto2);}",
+                    "level": "hard"
+                },
+                {
+                    "question": "Escreva uma função que verifique se uma matriz 9x9 representa uma solução válida de Sudoku.",
+                    "response": "function trianguloRetangulo(lado1, lado2, lado3) { const hipotenusa = Math.max(lado1, lado2, lado3); const cateto1 = Math.min(lado1, lado2, lado3); const cateto2 = lado1 + lado2 + lado3 - hipotenusa; return (cateto1 * cateto1) === (cateto2 * cateto2);}",
+                    "level": "hard"
+                },
+                {
+                    "question": "Escreva uma função que verifique se uma matriz 9x9 representa uma solução válida de Sudoku.",
+                    "response": "function trianguloRetangulo(lado1, lado2, lado3) { const hipotenusa = Math.max(lado1, lado2, lado3); const cateto1 = Math.min(lado1, lado2, lado3); const cateto2 = lado1 + lado2 + lado3 - hipotenusa; return (cateto1 * cateto1) === (cateto2 * cateto2);}",
+                    "level": "hard"
+                },
+                {
+                    "question": "Escreva uma função que verifique se uma matriz 9x9 representa uma solução válida de Sudoku.",
+                    "response": "function trianguloRetangulo(lado1, lado2, lado3) { const hipotenusa = Math.max(lado1, lado2, lado3); const cateto1 = Math.min(lado1, lado2, lado3); const cateto2 = lado1 + lado2 + lado3 - hipotenusa; return (cateto1 * cateto1) === (cateto2 * cateto2);}",
+                    "level": "hard"
+                },
+                {
+                    "question": "Escreva uma função que verifique se uma matriz 9x9 representa uma solução válida de Sudoku.",
+                    "response": "function trianguloRetangulo(lado1, lado2, lado3) { const hipotenusa = Math.max(lado1, lado2, lado3); const cateto1 = Math.min(lado1, lado2, lado3); const cateto2 = lado1 + lado2 + lado3 - hipotenusa; return (cateto1 * cateto1) === (cateto2 * cateto2);}",
+                    "level": "hard"
+                },
+
+                {
+                    "question": "Escreva uma função que verifique se uma matriz 9x9 representa uma solução válida de Sudoku.",
+                    "response": "function trianguloRetangulo(lado1, lado2, lado3) { const hipotenusa = Math.max(lado1, lado2, lado3); const cateto1 = Math.min(lado1, lado2, lado3); const cateto2 = lado1 + lado2 + lado3 - hipotenusa; return (cateto1 * cateto1) === (cateto2 * cateto2);}",
+                    "level": "hard"
+                },
+
+                {
+                    "question": "Escreva uma função que verifique se uma matriz 9x9 representa uma solução válida de Sudoku.",
+                    "response": "function trianguloRetangulo(lado1, lado2, lado3) { const hipotenusa = Math.max(lado1, lado2, lado3); const cateto1 = Math.min(lado1, lado2, lado3); const cateto2 = lado1 + lado2 + lado3 - hipotenusa; return (cateto1 * cateto1) === (cateto2 * cateto2);}",
+                    "level": "hard"
+                },
+
+                {
+                    "question": "Escreva uma função que verifique se uma matriz 9x9 representa uma solução válida de Sudoku.",
+                    "response": "function trianguloRetangulo(lado1, lado2, lado3) { const hipotenusa = Math.max(lado1, lado2, lado3); const cateto1 = Math.min(lado1, lado2, lado3); const cateto2 = lado1 + lado2 + lado3 - hipotenusa; return (cateto1 * cateto1) === (cateto2 * cateto2);}",
+                    "level": "hard"
+                }
+
+
+            ]
+
+
+        }
+       
+    ]
+}

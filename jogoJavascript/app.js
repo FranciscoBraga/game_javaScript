@@ -1,32 +1,29 @@
 const button = document.querySelector("#button")
 let minutos = document.getElementById('minutos')
 let segundos = document.getElementById('segundos')
+let sobre = document.getElementById("sobre")
 let min = '00'
 let seg = '00'
 let tempoCorrido = false
 let resposta = null
-let level = null
-let op = null
+let level = 'easy'
+let op = 'javascript'
+let pergunta = null
+let pegarData = Array()
 
-function inicializa() {
-  tempoCorrido = true
-  seg = '00'
-  resposta = null
-  document.getElementById('resposta').className = ''
-  level = document.querySelector("input[name='level']:checked").id
-  level = (level == null) ? 'easy' : level
-  let sobre = document.getElementById("sobre")
-  op = sobre.options[sobre.selectedIndex].value
-  console.log(op)
-  if (document.getElementById('respostaJson')) {
-    document.getElementById('tempo').removeChild(document.getElementById('respostaJson'))
-  }
-  duracaoTempo(document.getElementById('duracaoTempo').value)
-}
 
-button.addEventListener('click', function () {
-  inicializa()
-  fetch('question_response_' + level + '_' + op + '.json')
+addEventListener('load',()=>{
+  carregaArquivo()
+  console.log(pegarData)
+})
+
+sobre.addEventListener('change',()=>{
+  carregaArquivo()
+  console.log(pegarData)
+})
+
+function carregaArquivo(){
+  fetch('question_response_' + op + '.json')
     .then(response => {
       if (!response.ok) {
         throw new Error('Erro ao carregar o arquivo JSON: ' + response.statusText);
@@ -34,17 +31,42 @@ button.addEventListener('click', function () {
       return response.json();
     })
     .then(data => {
-      document.getElementById('output').textContent = tratarJson(data)
+      pegarData = data
     })
     .catch(error => {
       document.getElementById('output').textContent = 'Erro: ' + error.message;
     });
+}
+
+function inicializa() {
+  tempoCorrido = true
+  seg = '00'
+  resposta = null
+  document.getElementById('resposta').className = ''
+  level = document.querySelector("input[name='level']:checked")
+  level = (level === null) ? 'easy' : level.id
+  op = sobre.options[sobre.selectedIndex].value
+  if (document.getElementById('respostaJson')) {
+    document.getElementById('tempo').removeChild(document.getElementById('respostaJson'))
+  }
+  duracaoTempo(document.getElementById('duracaoTempo').value)
+}
+
+
+
+button.addEventListener('click', function () {
+  inicializa()
+  document.getElementById('output').textContent = tratarJson(pegarData, level)
 });
 
-function tratarJson(file) {
-  let random = Math.floor(Math.random() * file.test.length)
-  resposta = file.test[random].response
-  return file.test[random].question
+function tratarJson(file, level) {
+  let indice = 0
+  if (level == 'easy') { indice = 0 }
+  if (level == 'medium') { indice = 1 }
+  if (level == 'hard') { indice = 2 }
+  let random = Math.floor(Math.random() * file.test[indice][level].length)
+  resposta = file.test[indice][level][random].response
+  return file.test[indice][level][random].question
 
 }
 
